@@ -67,15 +67,11 @@ a:hover {
 .block2 { 
     grid-area: block2; 
     background-color: #000000;
-    background-image: url(pictures/png-transparent-porsche-356-car-luxury-vehicle-1963-1989-porsche-911-porsche-logo-convertible-logo-car-removebg-preview.png);
-    background-size: 55%;
     background-position: center;
     background-repeat: no-repeat;
 }
 .block3 { grid-area: block3; 
     background-color: white; 
-    background-image: url(pictures/porsche-model.png); 
-    background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
 }
