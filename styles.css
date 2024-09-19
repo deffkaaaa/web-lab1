@@ -144,7 +144,7 @@ li {
     font-family: 'Porsche Font', sans-serif;
     font-size: clamp(13px, 2vw, 32px);
     max-height: 100%;
-    overflow-x: auto;
+    overflow: auto;
     max-width: 100%;
     display: flex;
     justify-content: center;
