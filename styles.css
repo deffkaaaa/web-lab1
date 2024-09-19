@@ -23,6 +23,7 @@
 
 body, html {
     height: 100%;
+    font-size: clamp(16px, 1.5vw, 24px);
 }
 
 a {
@@ -43,7 +44,7 @@ a:hover {
         "block5 block6 block6 block4"
         "block7 block7 block7 block7";
     grid-template-rows: 1fr 0.5fr 2.5fr 0.5fr 1fr;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1.2fr 2.2fr 1.2fr 1.2fr;
     height: 100vh;
     gap: 10px;
 }
@@ -52,11 +53,10 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5vw;
     font-weight: bold;
     border: 1px solid black;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     overflow-wrap: break-word; 
 }
 
@@ -68,7 +68,11 @@ a:hover {
 
 .block1 { 
     grid-area: block1; 
-    background-color: #b12b28; 
+    background-color: #b12b28;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
 }
 .block2 { 
     grid-area: block2; 
@@ -86,15 +90,16 @@ a:hover {
     grid-area: block4; 
     background-color: #ebd698;
     text-align: center;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;
+    overflow: auto;
+    max-height: 100%;
 }
 
 .block4 h2 {
-    font-size: 2vw;
+    font-size: clamp(18px, 2vw, 36px);
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
@@ -106,6 +111,8 @@ ol, ul {
     margin: 0 auto;
     max-width: 80%; 
     text-align: left;
+    max-height: 100%;
+    overflow: auto;
 }
 
 ol {
@@ -118,21 +125,38 @@ ul {
 
 li {
     margin-bottom: 10px;
-    font-size: 1.5vw;
+    font-size: clamp(14px, 1.7vw, 28px);
 }
 
 
 .block5 { grid-area: block5; 
-    background-color: #ebd698; 
+    background-color: #ebd698;
+    overflow: auto;
+    max-height: 100%; 
 }
-.block6 { grid-area: block6; 
+.block6 { 
+    grid-area: block6; 
     background-color: #000000; 
     color: #ffffff;
     font-family: 'Porsche Font', sans-serif;
-    font-size: 2vw;
+    font-size: clamp(13px, 2vw, 32px);
+    max-height: 100%;
+    overflow-x: auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
 }
-.block7 { grid-area: block7; 
-    background-color: #b12b28; 
+
+.block7 { 
+    grid-area: block7; 
+    background-color: #b12b28;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
 }
 
 .blockX, .blockY {
@@ -140,18 +164,24 @@ li {
     font-size: 2vw;
     padding: 1vh 2vw; 
     border: 1px solid black;
-    position: absolute; 
+    position: absolute;
     font-family: 'Porsche Font', sans-serif;
+    max-width: 80%;
+    text-align: center;
+    overflow: auto;
+    box-sizing: border-box;
 }
 
 .blockX {
     top: 50%;
     right: 2vw;
     transform: translateY(-50%);
+    font-size: clamp(20px, 2.5vw, 40px);
 }
 
 .blockY {
     bottom: 50%;
     right: 2vw;
     transform: translateY(50%);
+    font-size: clamp(20px, 2.5vw, 40px);
 }
