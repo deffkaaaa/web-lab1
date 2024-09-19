@@ -122,6 +122,7 @@ ol {
 
 ul {
     list-style-type: disc;
+    padding-left: 30px;
 }
 
 li {
