@@ -22,13 +22,15 @@
 }
 
 body, html {
-    height: 100%;
+    height: 100vh;
     font-size: clamp(16px, 1.5vw, 24px);
+    overflow: auto;
 }
 
 a {
     color: #000000;
     transition: color 0.3s;
+    text-decoration: none;
 }
 
 a:hover {
@@ -43,7 +45,7 @@ a:hover {
         "block5 block3 block3 block4"
         "block5 block6 block6 block4"
         "block7 block7 block7 block7";
-    grid-template-rows: 1fr 0.5fr 2.5fr 0.5fr 1fr;
+    grid-template-rows: 1fr 0.3fr 2.5fr 0.3fr 1fr;
     grid-template-columns: 1.2fr 2.2fr 1.2fr 1.2fr;
     height: 100vh;
     gap: 10px;
@@ -56,8 +58,10 @@ a:hover {
     font-weight: bold;
     border: 1px solid black;
     position: relative;
-    overflow: auto;
-    overflow-wrap: break-word; 
+    overflow: hidden;
+    overflow-wrap: break-word;
+    min-height: 200px; 
+    max-height: 100vh;
 }
 
 .block img {
@@ -80,6 +84,7 @@ a:hover {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .block3 { grid-area: block3; 
     background-color: white; 
     background-position: center;
@@ -107,7 +112,7 @@ a:hover {
 }
 
 ol, ul {
-    padding-left: 20px; 
+    padding-left: 2rem; 
     margin: 0 auto;
     max-width: 80%; 
     text-align: left;
@@ -126,7 +131,8 @@ ul {
 }
 
 li {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     font-size: clamp(14px, 1.5vw, 28px);
 }
 
@@ -143,7 +149,6 @@ li {
     color: #ffffff;
     font-family: 'Porsche Font', sans-serif;
     font-size: clamp(13px, 2vw, 32px);
-    max-height: 100%;
     overflow: auto;
     max-width: 100%;
     display: flex;
@@ -159,7 +164,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; 
+    position: relative;
 }
 
 .blockX, .blockY {
